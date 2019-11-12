@@ -1,0 +1,7 @@
+<!-- app/views/tasks/index.html.erb -->
+<% @tasks.each do |task| %>
+  <h4>
+     <%= link_to task.title, task_path(task) %>
+    <%= task.completed? ? '✅' : '❎' %>
+  </h4>
+<% end %>
